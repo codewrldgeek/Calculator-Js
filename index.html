@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>JavaScript Calculator</title> 
+	<link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+                
+	<!-- For styling -->
+	<style> 
+		table { 
+            background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(92,115,91,1) 0%, rgba(109,129,108,1) 0%, rgba(255,255,255,1) 74%, rgba(0,0,0,1) 100%);
+			border: 1px solid black; 
+			margin-left: auto; 
+			margin-right: auto; 
+            border-radius: 12px;
+		} 
+
+		input[type="button"] { 
+            font-family: "SF Pro Display";
+			width: 100%; 
+			padding: 20px 40px; 
+			background-color: grey; 
+			color: white; 
+			font-size: 24px; 
+			font-weight: bold; 
+			border: none; 
+			border-radius: 5px; 
+		} 
+
+		input[type="text"] { 
+            font-family: "SF Pro Display";
+			padding: 20px 30px; 
+			font-size: 24px; 
+			font-weight: bold; 
+			border: none; 
+			border-radius: 5px; 
+			border: 2px solid black; 
+		} 
+	</style> 
+</head> 
+	
+<body> 
+	
+	<!-- Use Table to Create Calculator Structure Design -->
+	<table id="calc"> 
+		<tr> 
+			<td colspan="3"><input type="text" id="result"></td> 
+			<td><input type="button" value="c" onclick="clr()" /> </td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="1" onclick="display('1')"> </td> 
+			<td><input type="button" value="2" onclick="display('2')"> </td> 
+			<td><input type="button" value="3" onclick="display('3')"> </td> 
+			<td><input type="button" value="/" onclick="display('/')"> </td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="4" onclick="display('4')"> </td> 
+			<td><input type="button" value="5" onclick="display('5')"> </td> 
+			<td><input type="button" value="6" onclick="display('6')"> </td> 
+			<td><input type="button" value="*" onclick="display('*')"> </td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="7" onclick="display('7')"> </td> 
+			<td><input type="button" value="8" onclick="display('8')"> </td> 
+			<td><input type="button" value="9" onclick="display('9')"> </td> 
+			<td><input type="button" value="-" onclick="display('-')"> </td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="0" onclick="display('0')"> </td> 
+			<td><input type="button" value="." onclick="display('.')"> </td> 
+			
+			<!-- solve function call function solve to evaluate value -->
+			<td><input type="button" value="=" onclick="calculate()"> </td> 
+
+			<td><input type="button" value="+" onclick="display('+')"> </td> 
+		</tr> 
+	</table> 
+
+<script src="index.js"></script>
+</body> 
+
+</html> 
