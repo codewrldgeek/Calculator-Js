@@ -34,9 +34,3 @@ function clr() {
 // Attach keypress event to the document and call handleKeyPress function whenever a key is pressed
 document.addEventListener('keypress', handleKeyPress);
 
-// Attach keyup event for Enter key on the calculator element
-document.getElementById("calc").addEventListener('keyup', function (event) {
-    if (event.keyCode === 13) { // 13 is the Enter key
-        calculate();
-    }
-});
